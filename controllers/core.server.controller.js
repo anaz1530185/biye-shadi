@@ -4,14 +4,14 @@
  * Module dependencies.
  */
 exports.index = function(req, res) {
-	res.render('./../index.ejs', {
+	res.render('./../public/views/user/HomePage.ejs', {
 		user: req.user || null,
 		request: req
 	});
 };
 
 exports.about = function(req, res) {
-	res.render('./../about.ejs', {
+	res.render('./../Login.ejs', {
 		user: req.user || null,
 		request: req
 	});

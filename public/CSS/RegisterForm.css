@@ -1,0 +1,55 @@
+
+* {
+  margin:0px;
+  padding: 0px
+}
+body{
+  background-image: url(marriage.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#header{
+  width:100%;
+  height:85px;
+  background-color: rgba(0,0,0,0.4);
+  box-shadow: 0px 3px 4 px gray;
+}
+#logo{
+  width:0.5px;
+  height:85px;
+  float:left;
+  padding-left: 20px;
+}
+#menu>li{
+  width:120px;
+  list-style: none;
+  float:right;
+
+}
+li>a{
+  display:block;
+  color:red;
+  line-height:80px;
+  text-align: center;
+  font-family: cursive;
+  font-size: 20px;
+  text-decoration: none;
+}
+li>a:hover{
+  background: skyblue;
+  color:#333;
+}
+#fieldset{
+  display:block;
+  color:black;
+  line-height:10px;
+  text-align: center;
+  font-family: cursive;
+  font-size: 30px;
+  text-decoration: none;
+}
+
+  
+
+
+    
