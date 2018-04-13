@@ -4,18 +4,19 @@
 
 <link rel="stylesheet" type="text/css" href="/CSS/RegisterForm.css">
 <title>BiyeShadi.com</title>
-<link rel="icon"type="Logo2/PNG"href="/Picture/Logo2.PNG"/>
+<link rel="icon"type="Logo2/png"href="/Picture/Logo2.png"/>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 </head>
 <body>
 <div id="header">
   <div id="logo">
-     <img src="/Picture/Logo.PNG" style="width:300px;height:70px;"/>
+    <img src="/Picture/Logo.png" style="width:300px;height:70px;"/>
   </div>
       <ul id="menu">
-	  <li><a href ="RegisterForm.ejs">SIGN UP</a></li>
-	  <li><a href ="Login.ejs"> SIGN IN</a></li>
-	  <li><a href = "HomePage.ejs">HOME</a></li>
-        <li><a href="#"> ABOUT</a></li>
+	  <li><a href ="/signup">SIGN UP</a></li>
+	  <li><a href ="/signin"> SIGN IN</a></li>
+	  <li><a href = "/home">HOME</a></li>
+        
         
       </ul>
 
@@ -23,27 +24,42 @@
 <br>
 <div id="fieldset">
 
-Registration No:<input type="number"><br><br><br>
-  First Name   :     <input type="text" placeholder="First name">
 
-  Last Name    :     <input type="text" placeholder="Last name"><br>
+  First Name   :     <input id="fname" type="text" placeholder="First name" id="firstName">
+
+  Last Name    :     <input id="lname" type="text" placeholder="Last name"><br>
   <br><br>
-  Fathers First Name:<input type="text" placeholder=" First Name">
-  Last Name:<input type="text" placeholder=" Last Name"><br><br><br>
+  <input type="file" src="HinduWedding.jpg" alt="Submit"><br><br><br>
+  Fathers Name:<input id="fatherName" type="text" placeholder=" Fathers Name"><br><br><br>
+ 
   
-  Mothers First Name:<input type="text" placeholder="First Name">
-  Last Name:<input type="text" placeholder="Last Name"><br><br><br>
+  Mothers Name:<input id="motherName" type="text" placeholder="Mothers Name"><br><br><br>
   Date Of Birth:
-  <input type="Date" placeholder="Day/Month/Year">Age:     <input type="Number" placeholder="Your Age"><br><br><br>
+  <input id="dateOfBirth" type="Date" placeholder="Day/Month/Year">
+  Age:
+  <select id="age">
+    <option>18y-30y</option> 
+    <option>31y-45y</option> 
+    <option>46y-60y</option> 	
+	</select> 
+  <br><br><br>
   
   Gender:
-   <select>
+   <select id="gender">
     <option>Male</option> 
     <option>FeMale</option> 
     <option>Other</option> 	
 	</select> 
-	Occupation:     <input type="text" placeholder="Your Occupation">
-	Religion:   <select>
+	Occupation:
+	<select id="occupation">
+    <option>Doctor</option> 
+    <option>Engineer</option> 
+    <option>Teacher</option> 
+    <option>BusinessMan</option> 
+    <option>Otherss</option> 	
+	</select> 
+	Religion:  
+	<select id="religion">
     <option>Islam</option> 
     <option>Hindu</option> 
     <option>Buddhist</option> 
@@ -52,26 +68,132 @@ Registration No:<input type="number"><br><br><br>
 	</select> <br><br><br>
  
   
-  Address:<input type="text"  placeholder="Your Present Address">
-  Contact:<input type="text" placeholder="Your email"><br><br><br>
+  Address:<input id="address" type="text"  placeholder="Your Present Address">
+  City:
+  <select id="city">
+    <option>Dhaka</option> 
+    <option>Rajshahi</option> 
+    <option>Chittagong</option> 
+    <option>Barishal</option> 
+    <option>Khulna</option> 
+    <option>Mymensingh</option> 
+    <option>Comilla</option>
+    <option>Sylhet</option>
+    <option>Rangpur</option> 
+	</select> 
+  Contact:<input id="contact" type="text" placeholder="Your Contact Number"><br><br><br>
   
+  Username:<input id="username" type="text" placeholder="Username"> <br><br><br>
+  Email Id:<input id="email" type="text" placeholder="Your email">  <br><br><br>
   
-  Email Id:<input type="text" placeholder="Your email"> <br><br><br>
-  Password:<input type="text" placeholder="Password"> <br><br><br>
-  ReType Password:<input type="text" placeholder="Password"> <br><br><br>
-  
-  Message:<br><br><br>
-<textarea rows,col="8,20" ></textarea><br><br>
-<button>Submit</button>
-  
+  Password:<input id="password" type="password" placeholder="Password"> <br><br><br>
+  Height: <input id="height" type="text" placeholder="Height"><br><br><br>
  
-  </select>
   
+  Skin Color:
+  <select id="skinColor">
+    <option>White</option> 
+    <option>Black</option> 
+    <option>Brown</option> 
+    <option>Others</option> 	
+	</select> 
+	Hair Color:
+	 <select id="hairColor">
+    <option>White</option> 
+    <option>Black</option> 
+    <option>Brown</option> 
+    <option>Others</option> 	
+	</select> 
+	 Eye Color:
+	 <select id="eyeColor">
+    <option>Catish</option> 
+    <option>Black</option> 
+    <option>Brown</option> 
+    <option>Others</option> 	
+	</select> 
+	<br><br><br>
+  Likes: <input id="likes" type="text" placeholder="Likes">
+   DisLikes: <input id="disLikes" type="text" placeholder="DisLikes">
+   Hobby: <input id="hobby" type="text" placeholder="hobby"><br><br><br>
+     Interest: <input id="interest" type="text" placeholder="Interest">
+      Expert: <input id="expert" type="text" placeholder="Expert">
+       Favourite Color: <input id="favouriteColor" type="text" placeholder="Favourite Color"><br><br><br>
+        Favourite Food: <input id="favouriteFood" type="text" placeholder="Favourite Food">
+         Blood Group: <input id="bloodGroup" type="text" placeholder="Blood Group"><br><br><br>
+         Previous Marital Status: <input id="previousMaritalStatus" type="text" placeholder="Previous Marital Status">
+          Medical test Status: <input id="medicalTestStatus" type="text" placeholder="Medical test Status"><br><br><br>
+   
+ 
+<button id="submit">Submit</button>
+  
+  <div id="footer">
+ 
+<a href="https://www.facebook.com" target="-blank"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
+<a href="https://www.youtube.com" target="-blank"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+<a href="https://www.twitter.com" target="-blank"><i class="fa fa-twitter" aria-hidden="true"..!></i></a>
+<a href="https://www.google.com" target="-blank"><i class="fa fa-globe" aria-hidden="true"></i></a>
+<a href="https://www.plus.google.com" target="-blank"><i class="fa fa-google-plus-official" aria-hidden="true"></i></a>
+
 </div>
 
-
-
-
+  
+</div>
+<script src="/lib/jquery/dist/jquery.min.js"></script>
+<script>
+var newAccount = {firstName:"",lastName:"",fatherName:"",motherName:"",dateOfBirth:"",
+                   age:"",gender:"",occupation:"",religion:"",address:"",contact:"",email:"",
+                   username:"",password:"",height:"",skinColor:"",hairColor:"",eyeColor:"",
+                   likes:"",disLikes:"",hobby:"",interest:"",expert:"",favouriteColor:"",favouriteFood:"",
+                   bloodGroup:"",previousMaritalStatus:"",medicalTestStatus:"",city:""};
+            $('#submit').click(function(){
+                console.log('submit clicked');
+                newAccount.firstName= $('#fname').val();
+                newAccount.lastName= $('#lname').val();
+                newAccount.fatherName= $('#fatherName').val();
+                newAccount.motherName= $('#motherName').val();
+                newAccount.dateOfBirth= $('#dateOfBirth').val();
+                newAccount.age= $('#age').val();
+                newAccount.gender= $('#gender').val();
+                newAccount.occupation= $('#occupation').val();
+                newAccount.city= $('#city').val();
+                newAccount.religion= $('#religion').val();
+                newAccount.address= $('#address').val();
+                newAccount.contact= $('#contact').val();
+                newAccount.email= $('#email').val();
+                newAccount.username= $('#username').val();
+                newAccount.password= $('#password').val();
+                newAccount.height= $('#height').val();
+                newAccount.skinColor= $('#skinColor').val();
+                newAccount.hairColor= $('#hairColor').val();
+                newAccount.eyeColor= $('#eyeColor').val();
+                newAccount.likes= $('#likes').val();
+                newAccount.disLikes= $('#disLikes').val();
+                newAccount.hobby= $('#hobby').val();
+                newAccount.interest= $('#interest').val();
+                newAccount.expert= $('#expert').val();
+                newAccount.favouriteColor= $('#favouriteColor').val();
+                newAccount.favouriteFood= $('#favouriteFood').val();
+                newAccount.bloodGroup= $('#bloodGroup').val();
+                newAccount.previousMaritalStatus= $('#previousMaritalStatus').val();
+                newAccount.medicalTestStatus= $('#medicalTestStatus').val();
+                
+                
+                
+                
+                $.ajax({
+                    method: "POST",
+                    url: "/auth/signup",
+                    data: newAccount
+                }).done(function(response){
+                    console.log(response);
+                    window.location.replace('/user/'+response._id);
+                }).fail(function(response){
+                    $('#error').text(JSON.parse(response.responseText).message);
+                    console.log(response.responseText);
+                });
+            });
+            </script>
+ 
 </body>
 </div>
 </ejs>

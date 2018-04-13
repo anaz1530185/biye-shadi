@@ -1,87 +1,176 @@
 <!doctype ejs>
 <ejs>
 <head>
-  <link rel="stylesheet" href="/CSS/HomePage.css
-  ">
+  <link rel="stylesheet" href="/CSS/HomePage.css ">
   <title>BiyeShadi.com</title>
-  <link rel="icon"type="Logo2/PNG"href="/Picture/Logo2.PNG"/>
+  <link rel="icon"type="Logo2/png"href="/Picture/Logo2.png"/>
   <meta name="viewport" content="width=device-width initial-scale=1">
 
 
+ 
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
  
 </head>
 <body>
 
   <div id="header">
   <div id="logo">
-     <img src="/Picture/Logo.PNG" style="width:300px;height:70px;"/>
+     <img src="/Picture/Logo.png" style="width:300px;height:70px;"/>
   </div>
       <ul id="menu">
-	  <li><a href ="RegisterForm.ejs">SIGN UP</a></li>
-	  <li><a href ="Login.ejs"> SIGN IN</a></li>
-	  <li><a href = "HomePage.ejs">HOME</a></li>
-        <li><a href="#"> ABOUT</a></li>
+	  <li><a href ="/signup">SIGN UP</a></li>
+	  <li><a href ="/signin"> SIGN IN</a></li>
+	  <li><a href = "/home">HOME</a></li>
+        
       </ul>
 
   </div>
 
   <div id="container">
-    <ul>
+    <ul id="navbar">
       <li>Gender
         <ul>
-          <li>Male</li>
-          <li>Female</li>
-          <li>Other</li>
+          <li id="male">Male</li>
+          <li id="female">Female</li>
+          <li id="other">Other</li>
 
         </ul>
       </li>
       <li>Age
         <ul>
-          <li>18y-30y</li>
-          <li>31y-45y</li>
-          <li>46y-60y</li>
+          <li id="eighteen">18y-30y</li>
+          <li id="thirty">31y-45y</li>
+          <li id="fourtySix">46y-60y</li>
 
         </ul>
       </li>
       <li>Religion
         <ul>
-          <li>Islam</li>
-          <li>Hindu</li>
-          <li>Buddhist</li>
-          <li>Christian</li>
-          <li>Others</li>
+          <li id="islam">Islam</li>
+          <li id="hindu">Hindu</li>
+          <li id="buddhist">Buddhist</li>
+          <li id="christian">Christian</li>
+          <li id="other1">Others</li>
         </ul>
       </li>
       <li>Occupation
         <ul>
-          <li>Doctor</li>
-          <li>Engineer</li>
-          <li>Other</li>
+          <li id="doctor">Doctor</li>
+          <li id="engineer">Engineer</li>
+          <li id="teacher">Teacher</li>
+          <li id="businessman">BusinessMan</li>
+          <li id="other2">Otherss</li>
         </ul>
       </li>
-      <li>Area
+      <li>City
         <ul>
-          <li>Dhaka</li>
-          <li>Rajsahi</li>
-          <li>Chitagong</li>
-          <li>Rongpur</li>
-          <li>Sylhet</li>
-          <li>Khulna</li>
-          <li>Barishal</li>
-          <li>Mymensingh</li>
-          <li>Comilla</li>
+          <li id="dhaka">Dhaka</li>
+          <li id="rajshahi">Rajsahi</li>
+          <li id="chittagong">Chittagong</li>
+          <li id="rangpur">Rongpur</li>
+          <li id="sythet">Sylhet</li>
+          <li id="khulna">Khulna</li>
+          <li id="barishal">Barishal</li>
+          <li id="mymenshing">Mymensingh</li>
+          <li id="comilla">Comilla</li>
 
         </ul>
       </li>
-      <li>Search</li>
+      <li id="search">Search</li>
 
     </ul>
   </div>
   <div id="footer">
-  
-  Email:<a href="https://mail.google.com" target="iframe_a">1430noyon@gmail.com</a></br>
-facebook Link:<a href="https://www.facebook.com" target="iframe_a">Noyon Mohadeb Das</a></br>
-linkedin Link:<a href="https://www.linkedin.com" target="iframe_a">Noyon Chandra Das</a>
+ 
+<a href="https://www.facebook.com" target="-blank"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
+<a href="https://www.youtube.com" target="-blank"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+<a href="https://www.twitter.com" target="-blank"><i class="fa fa-twitter" aria-hidden="true"..!></i></a>
+<a href="https://www.google.com" target="-blank"><i class="fa fa-globe" aria-hidden="true"></i></a>
+<a href="https://www.plus.google.com" target="-blank"><i class="fa fa-google-plus-official" aria-hidden="true"></i></a>
+
 </div>
+ <script src="/lib/jquery/dist/jquery.min.js"></script>
+<script>
+var search="?";
+   $("#male").click(function(event){
+    search=search+"gender=Male";
+   });
+    $("#female").click(function(event){
+     search=search+"&gender=FeMale";
+   } );
+   $("#other").click(function(event){
+     search=search+"&gender=Other";
+   } );
+   $("#eighteen").click(function(event){
+     search=search+"&age=18y-30y";
+   });
+   $("#thirty").click(function(event){
+    search=search+"&age=31y-45y";
+   });
+   $("#fourtySix").click(function(event){
+     search=search+"&age=46y-60y";
+   }); 
+   $("#islam").click(function(event){
+     search=search+"&religion=Islam";
+   });
+   $("#hindu").click(function(event){
+     search=search+"&religion=Hindu";
+   });
+    $("#buddhist").click(function(event){
+      search=search+"&religion=Buddhist";
+   });
+    $("#christian").click(function(event){
+      search=search+"&religion=Christian";
+   });
+    $("#other1").click(function(event){
+     search=search+"&religion=Others";
+   } );
+   $("#doctor").click(function(event){
+     search=search+"&occupation=Doctor";
+   });
+    $("#engineer").click(function(event){
+      search=search+"&occupation=Engineer";
+   });
+   $("#teacher").click(function(event){
+      search=search+"&occupation=Teacher";
+   });
+   $("#businessman").click(function(event){
+      search=search+"&occupation=BusinessMan";
+   });
+    $("#other2").click(function(event){
+      search=search+"&occupation=Otherss";
+   });
+    $("#dhaka").click(function(event){
+      search=search+"&city=Dhaka";
+   });
+    $("#rajshahi").click(function(event){
+      search=search+"&city=Rajshahi";
+   });
+    $("#chittagong").click(function(event){
+      search=search+"&city=Chittagong";
+   });
+    $("#rangpur").click(function(event){
+      search=search+"&city=Rongpur";
+   });
+    $("#sythet").click(function(event){
+      search=search+"&city=Sylhet";
+   });
+    $("#khulna").click(function(event){
+       search=search+"&city=Khulna";
+   });
+    $("#barishal").click(function(event){
+      search=search+"&city=Barishal";
+   });
+    $("#mymenshing").click(function(event){
+      search=search+"&city=Mymensingh";
+   });
+    $("#comilla").click(function(event){
+      search=search+"&city=Comilla";
+   });
+   $("#search").click(function(event){
+ 
+       window.location.replace('/search'+search);
+   });
+</script>
 </body>
 </ejs>

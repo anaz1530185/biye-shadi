@@ -3,18 +3,18 @@
 <link rel="stylesheet" href="/CSS/Login.css">
   <title>BiyeShadi.com</title>
   <link rel="icon"type="Logo2/PNG"href="Logo2.PNG"/>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 </head>
 <body>
   
     <div id="header">
   <div id="logo">
-     <img src="Logo.PNG" style="width:300px;height:70px;"/>
+    <img src="/Picture/Logo.png" style="width:300px;height:70px;"/>
   </div>
       <ul id="menu">
-	  <li><a href ="RegisterForm.ejs">SIGN UP</a></li>
-	  <li><a href ="Login.ejs"> SIGN IN</a></li>
-	  <li><a href = "HomePage.ejs">HOME</a></li>
-        <li><a href="#"> ABOUT</a></li>
+	  <li><a href ="/signup">SIGN UP</a></li>
+	  <li><a href ="/signin"> SIGN IN</a></li>
+	  <li><a href = "/home">HOME</a></li>
         
       </ul>
 
@@ -24,11 +24,45 @@
 
   <div class="aa">
     <h2> SIGN IN</h2>
-    <form>
-      <input type="text" placeholder="Username/Email"><br><br>
-      <input type="password" placeholder="Please Enter Password"><br><br>
-      <input type="submit" value="Submit">
-    </form>
+    
+      <input id="email" type="text" placeholder="Username/Email"><br><br>
+      <input id="password" type="password" placeholder="Please Enter Password"><br><br>
+      <button id="submit">Submit</button>
+  
   </div>
+  <div id="footer">
+ 
+<a href="https://www.facebook.com" target="-blank"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
+<a href="https://www.youtube.com" target="-blank"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+<a href="https://www.twitter.com" target="-blank"><i class="fa fa-twitter" aria-hidden="true"..!></i></a>
+<a href="https://www.google.com" target="-blank"><i class="fa fa-globe" aria-hidden="true"></i></a>
+<a href="https://www.plus.google.com" target="-blank"><i class="fa fa-google-plus-official" aria-hidden="true"></i></a>
+
+</div>
 </body>
+ <script src="/lib/jquery/dist/jquery.min.js"></script>
+  <script src="/vendor/ejs_production.js"></script>
+  <script>
+  var user = {};
+    $("#email").change(function(event){
+      user.email=$("#email").val();
+    });
+    $("#password").change(function(event){
+      user.password=$("#password").val();
+    });
+    $("#submit").click(function(event){
+      console.log(user)
+      $.ajax({
+        method: 'POST',
+        url: "/auth/signin",
+        data: user
+      }).done(function(response){
+        console.log(response);
+        window.location.replace('/user/'+response._id);
+      }).fail(function(response){
+        console.log(response);
+        $("#error").text("Something went wrong! Try again.");
+      });
+    });
+  </script>
 </ejs>

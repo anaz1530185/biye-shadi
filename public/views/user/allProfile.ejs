@@ -1,0 +1,62 @@
+<html>
+<head>
+    <head>
+<link rel="stylesheet" href="/CSS/view.css">
+  <title>BiyeShadi.com</title>
+  
+</head>
+</head>  
+<body>
+  
+   <div id="header">
+  <div id="logo">
+    <img src="/Picture/Logo.png" style="width:300px;height:70px;"/>
+  </div>
+      <ul id="menu">
+	  <li><a href ="/signup">SIGN UP</a></li>
+	  <li><a href ="/signin"> SIGN IN</a></li>
+	  <li><a href = "/home">HOME</a></li>
+       
+        
+      </ul>
+
+  </div>
+      <h1>List of all users</h1>
+      
+<% console.log(users) %>
+  <% for(var i=0; i<users.length; i++) { %>
+    
+    <h1>Name:<%= users[i].firstName+users[i].lastName%></h1>
+    <h3>Fathers Name:<%= users[i].fatherName%></h3>
+    <h3>Mothers Name:<%= users[i].motherName%></h3>
+    <h3>Date Of Birth:<%= users[i].dateOfBirth%></h3>
+    <h3>Age:<%= users[i].age%></h3>
+    <h3>Gender:<%= users[i].gender%></h3>
+    <h3>Occupation:<%= users[i].occupation%></h3>
+     <h3>Religion:<%= users[i].religion%></h3>
+    <h3>Address:<%= users[i].address%></h3>
+    <h3>Contact:<%= users[i].contact%></h3>
+     <h3>Email:<%= users[i].email%></h3>
+      <h3>Height:<%= users[i].height%></h3>
+       <h3>Skin Color:<%= users[i].skinColor%></h3>
+        <h3>Hair Color:<%= users[i].hairColor%></h3>
+         <h3>Eye Color:<%= users[i].eyeColor%></h3>
+          <h3>Likes:<%= users[i].likes%></h3>
+           <h3>Dislikes:<%= users[i].dislikes%></h3>
+            <h3>Hobby:<%= users[i].hobby%></h3>
+             <h3>Interest:<%= users[i].interest%></h3>
+              <h3>Expert:<%= users[i].expert%></h3>
+               <h3>Favourite Color:<%= users[i].favouriteColor%></h3>
+                <h3>Favourite Food:<%= users[i].favouriteFood%></h3>
+                 <h3>Blood Color:<%= users[i].bloodGroup%></h3>
+                  <h3>Previous Marital Status:<%= users[i].previousMaritalStatus%></h3>
+                   <h3>Medical Test Status:<%= users[i].medicalTestStatus%></h3>
+    <h3><%= users[i].created%></h3><br><br><br>
+    
+    
+    
+    
+    <% } %>
+  </body>  
+</html> 
+      

@@ -30,4 +30,29 @@ module.exports = function(app) {
 	app.route('/signin').get(users.signinView);
 	// Finish by binding the user middleware
 	app.param('userId', users.userByID);
-};
+		app.route('/signup').get(users.signupView);
+			app.route('/home').get(users.HomeView);
+		
+
+ app.route('/api/users')
+	.get(users.list)
+	.post(users.requiresLogin, users.create);
+
+  app.route('/api/users/:userId')
+	.get(users.read)
+  .delete(users.requiresLogin, users.delete);
+
+	app.route('/api/users/edit/:userId')
+	.get(users.read)
+	.put(users.requiresLogin, users.update);
+
+app.route('/allProfile').get(users.listView);
+app.route('/users/RegisterForm').get(users.createView);
+app.route('/user/:userId').get(users.singleView);
+app.route('/search').get(users.search);
+
+
+app.param('userId', users.userByID);
+
+
+}

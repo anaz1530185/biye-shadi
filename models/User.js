@@ -3,9 +3,9 @@
 /**
  * Module dependencies.
  */
-var mongoose = require('mongoose'),
-    Schema = mongoose.Schema,
-    crypto = require('crypto');
+var mongoose = require('mongoose');
+var   Schema = mongoose.Schema;
+var   crypto = require('crypto');
 
 /**
  * A Validation function for local strategy properties
@@ -44,6 +44,21 @@ var UserSchema = new Schema({
         type: String,
         trim: true
     },
+    
+    fatherName: {
+        type: String,
+        trim: true,
+        default: '',
+        required: 'Fathers Name required'
+      },
+      
+    motherName: {
+        type: String,
+        trim: true,
+        default: '',
+        required: 'Mothers Name required'
+      },
+    
     email: {
         type: String,
         trim: true,
@@ -56,6 +71,132 @@ var UserSchema = new Schema({
         trim: true,
         required: 'User Name required'
     },
+     dateOfBirth: {
+        type: String,
+        trim: true,
+        default: '',
+        required: 'Date Of Birth required'
+      },
+       age: {
+        type: String,
+        trim: true,
+        default: '',
+        required: 'Age required'
+      },
+       gender: {
+        type: String,
+        trim: true,
+        default: '',
+        required: 'Gender required'
+      },
+       occupation: {
+        type: String,
+        trim: true,
+        default: '',
+        required: 'Occupation required'
+      },
+       religion: {
+        type: String,
+        trim: true,
+        default: '',
+        required: 'Religion required'
+      },
+       address: {
+        type: String,
+        trim: true,
+        default: '',
+        required: 'Address required'
+      },
+       contact: {
+        type: String,
+        trim: true,
+        default: '',
+        required: 'Contact required'
+      },
+       height: {
+        type: String,
+        trim: true,
+        default: '',
+        required: 'Height required'
+      },
+       skinColor: {
+        type: String,
+        trim: true,
+        default: '',
+        required: 'Skin color required'
+      },
+      hairColor: {
+        type: String,
+        trim: true,
+        default: '',
+        required: 'Hair color required'
+      },
+      eyeColor: {
+        type: String,
+        trim: true,
+        default: '',
+        required: 'Eye color required'
+      },
+      likes: {
+        type: String,
+        trim: true,
+        default: '',
+        required: 'Likes required'
+      },
+      disLikes: {
+        type: String,
+        trim: true,
+        default: '',
+        required: 'DisLikes required'
+      },
+      hobby: {
+        type: String,
+        trim: true,
+        default: '',
+        required: 'Hobby required'
+      },
+      interest: {
+        type: String,
+        trim: true,
+        default: '',
+        required: 'Interest required'
+      },
+      expert: {
+        type: String,
+        trim: true,
+        default: '',
+        required: 'Experts required'
+      },
+      favouriteColor: {
+        type: String,
+        trim: true,
+        default: '',
+        required: 'Favourite Color required'
+      },
+       favouriteFood: {
+        type: String,
+        trim: true,
+        default: '',
+        required: 'Favourite Food required'
+      },
+       bloodGroup: {
+        type: String,
+        trim: true,
+        default: '',
+        required: 'Blood Group required'
+      },
+       previousMaritalStatus: {
+        type: String,
+        trim: true,
+        default: '',
+        required: 'Previous Marital Status required'
+      },
+       medicalTestStatus: {
+        type: String,
+        trim: true,
+        default: '',
+        required: 'Medical Test Status required'
+      },
     photo: {
         type: String,
         default: 'http://www.ee-ip.org/sites/default/files/default_images/default-user.png',
@@ -97,9 +238,6 @@ var UserSchema = new Schema({
             enum: ['user', 'admin']
         }],
         default: ['user']
-    },
-    updated: {
-        type: Date
     },
     created: {
         type: Date,

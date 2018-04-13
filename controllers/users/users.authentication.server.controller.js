@@ -45,7 +45,7 @@ exports.signup = function(req, res) {
 	});
 };
 
-/**
+/**product
  * Signin after passport authentication
  */
 exports.signin = function(req, res, next) {
@@ -66,9 +66,22 @@ exports.signin = function(req, res, next) {
 		}
 	})(req, res, next);
 };
+exports.HomeView = function(req, res) {
+	res.render('./../public/views/user/HomePage.ejs', {
+		user: req.user || null,
+		request: req
+	});
+};
 
 exports.signinView = function(req, res) {
-	res.render('./../public/views/user/signin.ejs', {
+	res.render('./../public/views/user/Login.ejs', {
+		user: req.user || null,
+		request: req
+	});
+};
+
+exports.signupView = function(req, res) {
+	res.render('./../public/views/user/RegisterForm.ejs', {
 		user: req.user || null,
 		request: req
 	});
