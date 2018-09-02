@@ -23,7 +23,7 @@
   </div>
       <h1>List of all users</h1>
       
-<% console.log(users) %>
+
   <% for(var i=0; i<users.length; i++) { %>
     
     <h1>Name:<%= users[i].firstName+users[i].lastName%></h1>
@@ -51,9 +51,11 @@
                  <h3>Blood Color:<%= users[i].bloodGroup%></h3>
                   <h3>Previous Marital Status:<%= users[i].previousMaritalStatus%></h3>
                    <h3>Medical Test Status:<%= users[i].medicalTestStatus%></h3>
-    <h3><%= users[i].created%></h3><br><br><br>
-    
-    
+    <h3><%= users[i].created%></h3><br>
+    <!--<button type="button" id="edit">Button</button>-->
+    <a href="/user-profile/<%=users[i].id%>" class="button"> Edit User</a>
+    <br>
+    <br>
     
     
     <% } %>

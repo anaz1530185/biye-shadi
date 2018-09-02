@@ -42,22 +42,23 @@ li>a:hover{
 
 
   .aa{
-    width:300px;
-    height:260px;
+    width:700px;
+    height:auto;
     background-color: rgba(0,0,0,0.4);
     margin:0 auto;
     margin-top: 200px;
     padding-top: 10px;
-    padding-left: 100px;
+    padding-left: 20px;
     border-radius: 15px;
     color:Black;
     font-weight: bolder;
     box-shadow: inset -4px -4px rgba(0,0,0,0.4);
     font-size: 18px;
+    text-align: center;
   }
   .aa input[type="text"]{
     width:200px;
-    height: 35px;
+    height: auto;
     border:0;
     border-radius: 5px;
     padding-left: 5px;
@@ -83,6 +84,21 @@ li>a:hover{
     font-size: 18px;
     display: none;
 }
+
+
+/*  a.button {*/
+/*    -webkit-appearance: button;*/
+/*    -moz-appearance: button;*/
+/*    appearance: button;*/
+
+/*    text-decoration: none;*/
+/*    color: green;*/
+/*    text-align: center;*/
+/*}*/
+
+
+
+
 
  #footer{
   width:100%;

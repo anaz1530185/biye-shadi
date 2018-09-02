@@ -1,176 +1,349 @@
 <!doctype ejs>
 <ejs>
 <head>
-  <link rel="stylesheet" href="/CSS/HomePage.css ">
-  <title>BiyeShadi.com</title>
-  <link rel="icon"type="Logo2/png"href="/Picture/Logo2.png"/>
-  <meta name="viewport" content="width=device-width initial-scale=1">
+    <title>BiyeShadi</title>
+    <link rel="stylesheet" href="/CSS/HomePage.css " crossorigin="anonymous">
+    <link rel="icon"type="Logo2/png"href="/Picture/Logo2.png"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" crossorigin="anonymous">
 
+    <!--<script language="javascript" type="text/javascript" src="jquery.js"></script>-->
+    
+    <meta name="viewport" content="width=device-width initial-scale=1">
 
- 
-<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
- 
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
 </head>
+
 <body>
-
+    
   <div id="header">
-  <div id="logo">
-     <img src="/Picture/Logo.png" style="width:300px;height:70px;"/>
-  </div>
-      <ul id="menu">
-	  <li><a href ="/signup">SIGN UP</a></li>
-	  <li><a href ="/signin"> SIGN IN</a></li>
-	  <li><a href = "/home">HOME</a></li>
+        <div id="logo">
+            <img src="/Picture/Logo.png" style="width:300px;height:70px;"/>
+         </div>
+
+<!--Menu 1530185--> 
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                  <a href="/home">Home</a>
+                  <a href="/signup">Signup</a>
+                  <a href="/signin">Signin</a>
+                  <a href="#">Gallery</a>
+                  <a href="#">Contact</a>
+            </div>
+            
+        <div id="main">
+            <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+        </div>
         
-      </ul>
+        <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+            document.getElementById("main").style.marginLeft = "250px";
+            document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+        }
 
-  </div>
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.getElementById("main").style.marginLeft= "0";
+            document.body.style.backgroundColor = "white";
+        }
+        </script>
 
-  <div id="container">
-    <ul id="navbar">
-      <li>Gender
-        <ul>
-          <li id="male">Male</li>
-          <li id="female">Female</li>
-          <li id="other">Other</li>
+    </div>
+    
+<!--slider 1530185-->  
 
-        </ul>
-      </li>
-      <li>Age
-        <ul>
-          <li id="eighteen">18y-30y</li>
-          <li id="thirty">31y-45y</li>
-          <li id="fourtySix">46y-60y</li>
+        <div class="slideshow-container">
 
-        </ul>
-      </li>
-      <li>Religion
-        <ul>
-          <li id="islam">Islam</li>
-          <li id="hindu">Hindu</li>
-          <li id="buddhist">Buddhist</li>
-          <li id="christian">Christian</li>
-          <li id="other1">Others</li>
-        </ul>
-      </li>
-      <li>Occupation
-        <ul>
-          <li id="doctor">Doctor</li>
-          <li id="engineer">Engineer</li>
-          <li id="teacher">Teacher</li>
-          <li id="businessman">BusinessMan</li>
-          <li id="other2">Otherss</li>
-        </ul>
-      </li>
-      <li>City
-        <ul>
-          <li id="dhaka">Dhaka</li>
-          <li id="rajshahi">Rajsahi</li>
-          <li id="chittagong">Chittagong</li>
-          <li id="rangpur">Rongpur</li>
-          <li id="sythet">Sylhet</li>
-          <li id="khulna">Khulna</li>
-          <li id="barishal">Barishal</li>
-          <li id="mymenshing">Mymensingh</li>
-          <li id="comilla">Comilla</li>
+            <div class="mySlides fade">
+                  <div class="numbertext">1 / 5</div>
+                  <img src="Picture/M1.jpg" style="width:100%">
+                  <div class="text">Marriage</div>
+            </div>
 
-        </ul>
-      </li>
-      <li id="search">Search</li>
+            <div class="mySlides fade">
+                  <div class="numbertext">2 / 5</div>
+                  <img src="Picture/M2.jpg" style="width:100%">
+                  <div class="text">Moment</div>
+            </div>
 
-    </ul>
-  </div>
-  <div id="footer">
+            <div class="mySlides fade">
+                  <div class="numbertext">3 / 5</div>
+                  <img src="Picture/M3.jpg" style="width:100%">
+                  <div class="text">New Start</div>
+            </div>
+            
+             <div class="mySlides fade">
+                  <div class="numbertext">4 / 5</div>
+                  <img src="Picture/M4.jpg" style="width:100%">
+                  <div class="text">One Soul</div>
+            </div>
+            
+             <div class="mySlides fade">
+                  <div class="numbertext">5 / 5</div>
+                  <img src="Picture/M5.jpg" style="width:100%">
+                  <div class="text">Love</div>
+            </div>
+
+    </div>
+    <br>
+
+            <div style="text-align:center">
+              <span class="dot"></span> 
+              <span class="dot"></span> 
+              <span class="dot"></span> 
+              <span class="dot"></span> 
+              <span class="dot"></span> 
+            </div>
+
+        <script>
+        var slideIndex = 0;
+        showSlides();
+        
+            function showSlides() {
+                var i;
+                var slides = document.getElementsByClassName("mySlides");
+                var dots = document.getElementsByClassName("dot");
+                for (i = 0; i < slides.length; i++) {
+                   slides[i].style.display = "none";  
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}    
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";  
+            dots[slideIndex-1].className += " active";
+            setTimeout(showSlides, 3000); // time change of the slider
+        }
+        </script>
+
+<!--slider 1530185--> 
+
+ <!--Menu 1530185--> 
  
-<a href="https://www.facebook.com" target="-blank"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
-<a href="https://www.youtube.com" target="-blank"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
-<a href="https://www.twitter.com" target="-blank"><i class="fa fa-twitter" aria-hidden="true"..!></i></a>
-<a href="https://www.google.com" target="-blank"><i class="fa fa-globe" aria-hidden="true"></i></a>
-<a href="https://www.plus.google.com" target="-blank"><i class="fa fa-google-plus-official" aria-hidden="true"></i></a>
-
+        <div id="container">
+        <!-- Update by SH: moved the dropdown div to outside of ul tag -->
+                    <div class="dropdown">
+                            <button class="btn btn-primary dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">Gender
+                               <span class="caret"></span></button>
+                                 <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                                    <li id="male" role="presentation"><a role="menuitem" tabindex="-1" href="#">Male</a></li>
+                                    <li id="female" role="presentation"><a role="menuitem" tabindex="-1" href="#">Female</a></li>
+                                   <li id="others" role="presentation"><a role="menuitem" tabindex="-1" href="#">Others</a></li>
+                                </ul>
+                        
+                   </div>
+        
+                    <div class="dropdown">
+                        <button class="btn btn-primary dropdown-toggle" type="button" id="menu2" data-toggle="dropdown">Age
+                            <span class="caret"></span></button>
+                                 <ul class="dropdown-menu" role="menu" aria-labelledby="menu2">
+                                      <li id="eighteen" role="presentation"><a role="menuitem" tabindex="-1" href="#">18y-30y</a></li>
+                                      <li id="thirty" role="presentation"><a role="menuitem" tabindex="-1" href="#">31y-45y</a></li>
+                                      <li id="fourtySix" role="presentation"><a role="menuitem" tabindex="-1" href="#">46y-60y</a></li>
+                                </ul>
+                                
+                   </div>
+        
+                     <div class="dropdown">
+                            <button class="btn btn-primary dropdown-toggle" type="button" id="menu3" data-toggle="dropdown">Religion
+                                <span class="caret"></span></button>
+                                     <ul class="dropdown-menu" role="menu" aria-labelledby="menu3">
+                                          <li id="islam" role="presentation"><a role="menuitem" tabindex="-1" href="#">Islam</a></li>
+                                          <li id="hindu" role="presentation"><a role="menuitem" tabindex="-1" href="#">Hindu</a></li>
+                                          <li id="buddhist" role="presentation"><a role="menuitem" tabindex="-1" href="#">Buddhist</a></li>
+                                          <li id="christian" role="presentation"><a role="menuitem" tabindex="-1" href="#">Christian</a></li>
+                                          <li id="other1" role="presentation"><a role="menuitem" tabindex="-1" href="#">Other</a></li>
+                                    </ul>
+                                    
+                     </div>
+         
+         
+         <div class="dropdown">
+                <button class="btn btn-primary dropdown-toggle" type="button" id="menu4" data-toggle="dropdown">Occupation
+                    <span class="caret"></span></button>
+                         <ul class="dropdown-menu" role="menu" aria-labelledby="menu4">
+                              <li id="doctor" role="presentation"><a role="menuitem" tabindex="-1" href="#">Doctor</a></li>
+                              <li id="engineer" role="presentation"><a role="menuitem" tabindex="-1" href="#">Engineer</a></li>
+                              <li id="teacher" role="presentation"><a role="menuitem" tabindex="-1" href="#">Teacher</a></li>
+                              <li id="businessman" role="presentation"><a role="menuitem" tabindex="-1" href="#">BusinessMan</a></li>
+                              <li id="other2" role="presentation"><a role="menuitem" tabindex="-1" href="#">Other</a></li>
+                        </ul>
+            </div>
+            
+            <div class="dropdown">
+                <button class="btn btn-primary dropdown-toggle" type="button" id="menu5" data-toggle="dropdown">City
+                    <span class="caret"></span></button>
+                         <ul class="dropdown-menu" role="menu" aria-labelledby="menu5">
+                              <li id="dhaka" role="presentation"><a role="menuitem" tabindex="-1" href="#">Dhaka</a></li>
+                              <li id="rajshahi" role="presentation"><a role="menuitem" tabindex="-1" href="#">Rajshahi</a></li>
+                              <li id="chittagong" role="presentation"><a role="menuitem" tabindex="-1" href="#">Chittagong</a></li>
+                              <li id="rangpur" role="presentation"><a role="menuitem" tabindex="-1" href="#">Rangpur</a></li>
+                              <li id="sythet" role="presentation"><a role="menuitem" tabindex="-1" href="#">Sylhet</a></li>
+                              <li id="khulna" role="presentation"><a role="menuitem" tabindex="-1" href="#">Khulna</a></li>
+                              <li id="barishal" role="presentation"><a role="menuitem" tabindex="-1" href="#">Barishal</a></li>
+                              <li id="mymenshing" role="presentation"><a role="menuitem" tabindex="-1" href="#">Mymensingh</a></li>
+                              <li id="comilla" role="presentation"><a role="menuitem" tabindex="-1" href="#">Comilla</a></li>
+                        </ul>
+            </div>
+            
+            <button id="search" type="button" class="button"><span>Search</span></button>
 </div>
- <script src="/lib/jquery/dist/jquery.min.js"></script>
+                
+        <!--end update-->
+        <!-- ANAZ -->
+        
+  <section id="Recentlyprofile">
+      <div class="recent">
+          <h2>Recently Added Profile</h2>
+          
+          <script id="source" language="javascript" type="text/javascript">
+        
+            $(function () 
+            {
+                $.ajax({                                      
+                    url: 'recent',                           
+                    data: "",                        
+                    dataType: 'json',                      
+                    success: function(data)        
+            {
+                var name = data[1];           
+                $('#output').html("<b> name: </b>"+name);
+                    } 
+                });
+            }); 
+
+        </script>
+      </div>
+  </section>
+  
+     <div id="footer" >
+            <a href="www.facebook.com" class="fa fa-facebook"></a>
+            <a href="www.twitter.com" class="fa fa-twitter"></a>
+            <a href="www.google.com.bd" class="fa fa-google"></a>
+            <a href="www.youtube.com" class="fa fa-youtube"></a>
+            <a href="www.instagram.com" class="fa fa-instagram"></a>
+     </div>
+         
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" crossorigin="anonymous"></script>
+
 <script>
 var search="?";
    $("#male").click(function(event){
     search=search+"gender=Male";
+    return false;
    });
     $("#female").click(function(event){
      search=search+"&gender=FeMale";
+     return false;
    } );
    $("#other").click(function(event){
      search=search+"&gender=Other";
+     return false;
    } );
    $("#eighteen").click(function(event){
      search=search+"&age=18y-30y";
+     return false;
    });
    $("#thirty").click(function(event){
     search=search+"&age=31y-45y";
+    return false;
    });
    $("#fourtySix").click(function(event){
      search=search+"&age=46y-60y";
+     return false;
    }); 
    $("#islam").click(function(event){
      search=search+"&religion=Islam";
+     return false;
    });
    $("#hindu").click(function(event){
      search=search+"&religion=Hindu";
+     return false;
    });
     $("#buddhist").click(function(event){
       search=search+"&religion=Buddhist";
+      return false;
    });
     $("#christian").click(function(event){
       search=search+"&religion=Christian";
+      return false;
    });
     $("#other1").click(function(event){
      search=search+"&religion=Others";
+     return false;
    } );
    $("#doctor").click(function(event){
      search=search+"&occupation=Doctor";
+     return false;
    });
     $("#engineer").click(function(event){
       search=search+"&occupation=Engineer";
+      return false;
    });
    $("#teacher").click(function(event){
       search=search+"&occupation=Teacher";
+      return false;
    });
    $("#businessman").click(function(event){
       search=search+"&occupation=BusinessMan";
+      return false;
    });
     $("#other2").click(function(event){
       search=search+"&occupation=Otherss";
+      return false;
    });
     $("#dhaka").click(function(event){
       search=search+"&city=Dhaka";
+      return false;
    });
     $("#rajshahi").click(function(event){
       search=search+"&city=Rajshahi";
+      return false;
    });
     $("#chittagong").click(function(event){
       search=search+"&city=Chittagong";
+      return false;
    });
     $("#rangpur").click(function(event){
       search=search+"&city=Rongpur";
    });
     $("#sythet").click(function(event){
       search=search+"&city=Sylhet";
+      return false;
    });
     $("#khulna").click(function(event){
        search=search+"&city=Khulna";
    });
     $("#barishal").click(function(event){
       search=search+"&city=Barishal";
+      return false;
    });
     $("#mymenshing").click(function(event){
       search=search+"&city=Mymensingh";
+      return false;
    });
     $("#comilla").click(function(event){
       search=search+"&city=Comilla";
+      return false;
    });
    $("#search").click(function(event){
  
        window.location.replace('/search'+search);
    });
+   
+    $(".dropdown ul li").click(function(){
+   	$(".dropdown.open").removeClass("open");
+   });
+   
+    
 </script>
 </body>
 </ejs>

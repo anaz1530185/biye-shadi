@@ -12,63 +12,74 @@
   <div id="logo">
     <img src="/Picture/Logo.png" style="width:300px;height:70px;"/>
       <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
 
   </div>
       <ul id="menu">
-	  <li><a href ="/signup">SIGN UP</a></li>
-	  <li><a href ="/signin"> SIGN IN</a></li>
+	  <!--<li><a href ="/signup">SIGN UP</a></li>-->
+	  <!--<li><a href ="/signin"> SIGN IN</a></li>-->
 	  <li><a href = "/home">HOME</a></li>
         
         
       </ul>
 
   </div>
-  <a href="/allProfile">See all profiles</a>
+  <!--<a href="/allProfile">See all profiles</a>-->
+   
+ 
   <div class="aa" id="aa">
-    
-<h1>Profile View</h1>    
-<p>Name:<%= request.profile.firstName +  request.profile.lastName  %></p>
-<p>Age:<%= request.profile.age %></p>
-<p>Occupation:<%= request.profile.occupation %></p>
-<p>Height:<%= request.profile.height %></p>
-<p>Area:<%= request.profile.address %></p>
-<p>Religion:<%= request.profile.religion %></p>
-<p>Contact:<%= request.profile.contact %></p><br><br>
-
-<button id="showDetails">Personal Details</button>
-
- </div>
- <div class="pdetails" id="pdetails">
-   <h1>Personal Details</h1>    
-
-<p>Name:<%= request.profile.firstName +  request.profile.lastName  %></p>
-    <p>Fathers Name:<%= request.profile.fatherName%></p>
-    <p>Mothers Name:<%= request.profile.motherName%></p>
-    <p>Date Of Birth:<%= request.profile.dateOfBirth%></p>
-    <p>Age:<%= request.profile.age%></p>
-    <p>Gender:<%= request.profile.gender%></p>
-    <p>Occupation:<%= request.profile.occupation%></p>
-     <p>Religion:<%= request.profile.religion%></p>
-    <p>Address:<%= request.profile.address%></p>
-    <p>Contact:<%= request.profile.contact%></p>
-     <p>Email:<%= request.profile.email%></p>
-      <p>Height:<%= request.profile.height%></p>
-       <p>Skin Color:<%= request.profile.skinColor%></p>
+   
+      <h1>Profile View</h1>    
+      <!--<p>Name:<%= request.profile.firstName +  request.profile.lastName  %></p>-->
+      <!--<p>Age:<%= request.profile.age %></p>-->
+      <!--<p>Occupation:<%= request.profile.occupation %></p>-->
+      <!--<p>Height:<%= request.profile.height %></p>-->
+      <!--<p>Area:<%= request.profile.address %></p>-->
+      <!--<p>Religion:<%= request.profile.religion %></p>-->
+      <!--<p>Contact:<%= request.profile.contact %></p><br><br>-->
+      <!--<button id="showDetails">Personal Details</button> -->
+      <p>Name:<%= request.profile.firstName +  request.profile.lastName  %></p>
+        <p>Fathers Name:<%= request.profile.fatherName%></p>
+        <p>Mothers Name:<%= request.profile.motherName%></p>
+        <p>Date Of Birth:<%= request.profile.dateOfBirth%></p>
+        <p>Age:<%= request.profile.age%></p>
+        <p>Gender:<%= request.profile.gender%></p>
+        <p>Occupation:<%= request.profile.occupation%></p>
+        <p>Religion:<%= request.profile.religion%></p>
+        <p>Address:<%= request.profile.address%></p>
+        <p>Contact:<%= request.profile.contact%></p>
+        <p>Email:<%= request.profile.email%></p>
+        <p>Height:<%= request.profile.height%></p>
+        <p>Skin Color:<%= request.profile.skinColor%></p>
         <p>Hair Color:<%= request.profile.hairColor%></p>
-         <p>Eye Color:<%= request.profile.eyeColor%></p>
-          <p>Likes:<%= request.profile.likes%></p>
-           <p>Dislikes:<%= request.profile.dislikes%></p>
-            <p>Hobby:<%= request.profile.hobby%></p>
-             <p>Interest:<%= request.profile.interest%></p>
-              <p>Expert:<%= request.profile.expert%></p>
-               <p>Favourite Color:<%= request.profile.favouriteColor%></p>
-                <p>Favourite Food:<%= request.profile.favouriteFood%></p>
-                 <p>Blood Color:<%= request.profile.bloodGroup%></p>
-                  <p>Previous Marital Status:<%= request.profile.previousMaritalStatus%></p>
-                   <p>Medical Test Status:<%= request.profile.medicalTestStatus%></p><br><br>
-
-   </div>
+        <p>Eye Color:<%= request.profile.eyeColor%></p>
+        <p>Likes:<%= request.profile.likes%></p>
+        <p>Dislikes:<%= request.profile.dislikes%></p>
+        <p>Hobby:<%= request.profile.hobby%></p>
+        <p>Interest:<%= request.profile.interest%></p>
+        <p>Expert:<%= request.profile.expert%></p>
+        <p>Favourite Color:<%= request.profile.favouriteColor%></p>
+        <p>Favourite Food:<%= request.profile.favouriteFood%></p>
+        <p>Blood Color:<%= request.profile.bloodGroup%></p>
+        <p>Previous Marital Status:<%= request.profile.previousMaritalStatus%></p>
+        <p>Medical Test Status:<%= request.profile.medicalTestStatus%></p><br><br>
+        
+        
+        <a href="/user-profile/<%=user.id%>"  class="btn btn-primary" role="button">Edit User</a>
+        <a class="btn btn-danger" id="delete" onclick="deleteData()" role="button">Delete User</a>
+  </div> 
+  
+  
+     <br><br><br>
+   
+   <!--<a href="/user-profile/<%=user.id%>" class="button"> Edit User</a>-->
+   <!--<a href="/user-profile/<%=user.id%>"  class="btn btn-primary" role="button">Edit User</a>-->
+   
+   
   <div id="footer">
+   
+   <br><br><br>
  
 <a href="https://www.facebook.com" target="-blank"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
 <a href="https://www.youtube.com" target="-blank"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
@@ -87,5 +98,28 @@
    $("#aa").hide()
  });
     </script>
+    
+
+<script>
+  
+  function deleteData(){
+   var pathname = window.location.pathname.split("/");
+   var id = pathname[pathname.length-1];
+   $.ajax({
+                    method: "DELETE",
+                    url: "/api/users/"+id,
+                  //  data: newAccount
+                }).done(function(response){
+                    //console.log(response);
+                    window.location.replace('/home');
+                    //console.log(response._id);
+                }).fail(function(response){
+                    console.log(response.responseText);
+                });
+  }
+ 
+</script>
+    
+    
 </body>
 </html> 

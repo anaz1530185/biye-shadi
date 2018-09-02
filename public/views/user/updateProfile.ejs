@@ -3,6 +3,7 @@
 <head>
 
 <link rel="stylesheet" type="text/css" href="/CSS/RegisterForm.css">
+<script src="/lib/jquery/dist/jquery.min.js"></script>
 <title>BiyeShadi.com</title>
 <link rel="icon"type="Logo2/png"href="/Picture/Logo2.png"/>
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
@@ -13,8 +14,8 @@
     <img src="/Picture/Logo.png" style="width:300px;height:70px;"/>
   </div>
       <ul id="menu">
-	  <li><a href ="/signup">SIGN UP</a></li>
-	  <li><a href ="/signin"> SIGN IN</a></li>
+	  <!--<li><a href ="/signup">SIGN UP</a></li>-->
+	  <!--<li><a href ="/signin"> SIGN IN</a></li>-->
 	  <li><a href = "/home">HOME</a></li>
         
         
@@ -124,7 +125,7 @@
           Medical test Status: <input id="medicalTestStatus" type="text" placeholder="Medical test Status"><br><br><br>
    
  
-<button id="submit">Submit</button>
+<button id="submit" onclick="updateData()">Submit</button>
   
   <div id="footer">
  
@@ -138,15 +139,66 @@
 
   
 </div>
-<script src="/lib/jquery/dist/jquery.min.js"></script>
+
 <script>
-var newAccount = {firstName:"",lastName:"",fatherName:"",motherName:"",dateOfBirth:"",
+
+    $(function(){
+                var pathname = window.location.pathname.split("/");
+                var id = pathname[pathname.length-1];
+             $.ajax({
+                    method: "GET",
+                    url: "/api/users/"+id
+                }).done(function(response){
+                    setData(response);
+                    console.log(response);
+                }).fail(function(response){
+                    $('#error').text(JSON.parse(response.responseText).message);
+                    console.log(response.responseText);
+                });
+        
+        
+                
+    });
+    function setData(response){
+            $('#fname').val(response.firstName);
+            $('#lname').val(response.lastName);
+            $('#fatherName').val(response.fatherName);
+            $('#motherName').val(response.motherName);
+            $('#dateOfBirth').val(response.dateOfBirth);
+            $('#age').val(response.age);
+            $('#gender').val(response.gender);
+            $('#occupation').val(response.occupation);
+            $('#city').val(response.city);
+            $('#religion').val(response.religion);
+            $('#address').val(response.address);
+            $('#contact').val(response.contact);
+            $('#email').val(response.email);
+            $('#username').val(response.username);
+            $('#password').val(response.password);
+            $('#height').val(response.height);
+            $('#skinColor').val(response.skinColor);
+            $('#hairColor').val(response.hairColor);
+            $('#eyeColor').val(response.eyeColor);
+            $('#likes').val(response.likes);
+            $('#disLikes').val(response.disLikes);
+            $('#hobby').val(response.hobby);
+            $('#interest').val(response.interest);
+            $('#expert').val(response.expert);
+            $('#favouriteColor').val(response.favouriteColor);
+            $('#favouriteFood').val(response.favouriteFood);
+            $('#bloodGroup').val(response.bloodGroup);
+            $('#previousMaritalStatus').val(response.previousMaritalStatus);
+            $('#medicalTestStatus').val(response.medicalTestStatus);
+                
+    }
+    
+    function updateData(){
+        var newAccount = {firstName:"",lastName:"",fatherName:"",motherName:"",dateOfBirth:"",
                    age:"",gender:"",occupation:"",religion:"",address:"",contact:"",email:"",
                    username:"",password:"",height:"",skinColor:"",hairColor:"",eyeColor:"",
                    likes:"",disLikes:"",hobby:"",interest:"",expert:"",favouriteColor:"",favouriteFood:"",
                    bloodGroup:"",previousMaritalStatus:"",medicalTestStatus:"",city:""};
-            $('#submit').click(function(){
-                //console.log('submit clicked');
+                   
                 newAccount.firstName= $('#fname').val();
                 newAccount.lastName= $('#lname').val();
                 newAccount.fatherName= $('#fatherName').val();
@@ -177,22 +229,24 @@ var newAccount = {firstName:"",lastName:"",fatherName:"",motherName:"",dateOfBir
                 newAccount.previousMaritalStatus= $('#previousMaritalStatus').val();
                 newAccount.medicalTestStatus= $('#medicalTestStatus').val();
                 
-                
-                
-                
+            
+                var pathname = window.location.pathname.split("/");
+                var id = pathname[pathname.length-1];
                 $.ajax({
-                    method: "POST",
-                    url: "/auth/signup",
+                    method: "PUT",
+                    url: "/api/users/edit/"+id,
                     data: newAccount
                 }).done(function(response){
-                    //console.log(response);
+                    console.log(response);
                     window.location.replace('/user/'+response._id);
+                    console.log(response._id);
                 }).fail(function(response){
-                    $('#error').text(JSON.parse(response.responseText).message);
-                    //console.log(response.responseText);
+                    console.log(response.responseText);
                 });
-            });
-            </script>
+    }
+    
+        
+</script>
  
 </body>
 </div>

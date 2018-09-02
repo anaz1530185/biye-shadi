@@ -40,17 +40,23 @@ module.exports = function(app) {
 
   app.route('/api/users/:userId')
 	.get(users.read)
-  .delete(users.requiresLogin, users.delete);
-
+    .delete(users.requiresLogin, users.delete);
+    
 	app.route('/api/users/edit/:userId')
 	.get(users.read)
-	.put(users.requiresLogin, users.update);
+	.put(users.update);
+	
+	//updating profile route
+app.route('/user-profile/:userId').get(users.requiresLogin,users.updateView);
 
-app.route('/allProfile').get(users.listView);
+
+app.route('/allProfile').get(users.requiresLogin,users.listView);
 app.route('/users/RegisterForm').get(users.createView);
 app.route('/user/:userId').get(users.singleView);
 app.route('/search').get(users.search);
 
+//ANAZ
+app.route('/recent').get(users.recent);
 
 app.param('userId', users.userByID);
 

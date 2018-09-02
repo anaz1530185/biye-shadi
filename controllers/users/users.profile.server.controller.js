@@ -68,6 +68,16 @@ module.exports.createView = function(req, res){
         });
 };
 
+//update view
+module.exports.updateView = function(req, res){
+  res.render('./../public/views/user/updateProfile.ejs', {
+          user: req.user || null,
+          request: req
+        });
+};
+
+
+
 module.exports.singleView = function(req, res){
   res.render('./../public/views/user/view.ejs', {
           user: req.user || null,
@@ -98,7 +108,7 @@ module.exports.listView = function(req, res) {
 };
 
 module.exports.search = function(req, res) {
-	console.log(req.query);
+	//console.log(req.query);
     User.find(req.query,function(err, data) {
       if (err) {
         return res.status(400).send({
@@ -122,7 +132,7 @@ module.exports.search = function(req, res) {
 
 
 module.exports.list = function(req, res) {
-  user.find(function(err, data) {
+  User.find(function(err, data) {
     if (err) {
       return res.status(400).send({
 
@@ -170,9 +180,7 @@ exports.delete = function(req, res) {
 
 module.exports.update = function(req, res) {
   var user = req.user;
-
   	user = _.extend(user, req.body);
-
   	user.save(function(err) {
   		if (err) {
   			return res.status(400).send();
@@ -183,10 +191,31 @@ module.exports.update = function(req, res) {
 };
 
 // exports.userByID = function(req, res, next, id) {
-// 	user.findById(id).populate('user', 'email').exec(function(err, user) {
-// 		if (err) return next(err);
-// 		if (!user) return next(new Error('Failed to load user ' + id));
-// 		req.user = user;
-// 		next();
+// User.findById(id).populate('user', 'email').exec(function(err, user) {
+// if (err) return next(err);
+// if (!user) return next(new Error('Failed to load user ' + id));
+// req.user = user;
+// next();
 // 	});
 // };
+
+//My code for recently profile added ANAZ
+
+module.exports.recent = function(req, res) {
+        User.find({}).sort('-created').limit(5).exec(function(err, data){
+          if (err) 
+          {
+            return res.status(400).json({
+               message: errorHandler.getErrorMessage(err)
+             })
+          }
+          res.json(req.profile,{
+            user: req.user || null,
+            request: req,
+            users: data
+          });
+        
+        });
+};
+
+

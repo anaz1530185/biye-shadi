@@ -8,15 +8,17 @@ module.exports.createView = function(req, res){
   res.render('./../public/views/user/RegisterForm.ejs', {
           user: req.user || null,
           request: req
-        });
+ });
 };
+
 
 module.exports.singleView = function(req, res){
   res.render('./../public/views/user/view.ejs', {
           user: req.user || null,
           request: req
         });
-}
+};
+
 
 module.exports.listView = function(req, res) {
     user.find(function(err, data) {
@@ -111,6 +113,8 @@ exports.userByID = function(req, res, next, id) {
 		next();
 	});
 };
+
+//updaePRofile
 
 
  

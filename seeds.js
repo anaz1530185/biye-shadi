@@ -1,11 +1,12 @@
 // initial dummy data for articles and user
 
-var mongoose = require('mongoose');
-var Article = require('./models/Article.js');
-var User = require('./models/User.js');
+ var mongoose = require('mongoose');
+ var Article = require('./models/Article.js');
+ var User = require('./models/User.js');
+ 
 // mongoose.connection.dropDatabase(error => {
 //   console.log('Database not dropped');
-//   //process.exit(0);
+//   process.exit(0);
 // });
 
 // var user = {
